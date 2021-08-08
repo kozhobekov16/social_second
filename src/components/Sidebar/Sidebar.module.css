@@ -1,0 +1,19 @@
+.sidebar {
+  height: 80vh;
+  padding: 1.5rem;
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  line-height: 40px;
+}
+.sidebar a {
+  text-decoration: none;
+  font-size: 22px;
+  color: rgb(28, 55, 207);
+}
+.sidebar a:hover{
+    color: brown;
+}
+a.active{
+    color: rgb(105, 36, 196);
+}

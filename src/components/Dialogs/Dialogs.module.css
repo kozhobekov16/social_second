@@ -1,0 +1,18 @@
+.names{
+    display: flex;
+    flex-direction: column;
+}
+.names a{
+    text-decoration: none;
+    font-size: 22px;
+    line-height: 50px;
+    color: rgb(28, 55, 207);
+}
+.dialogs{
+    display: grid;
+    padding: 15px 25px;
+    grid-template-columns: 30% 80%;
+}
+.massages{
+    color: rgb(14, 14, 14);
+}
