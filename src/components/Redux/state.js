@@ -1,6 +1,10 @@
 const state = {
   profilePage: {
-    posts: [{ massage: "Hey, how are you" }, { massage: "What are doing?" }],
+    posts: [
+      { id: 1, massage: "Hey, how are you", likes: 15 },
+      { id: 2, massage: "What are doing?", likes: 10 },
+      { id: 3, massage: "What d doing?", likes: 11 },
+    ],
   },
   dialogsPage: {
     data: [
@@ -14,7 +18,12 @@ const state = {
   },
 };
 
-// const addPost = () =>{
-  
-// }
+export const addPost = (newPost) => {
+  let newMassage = {
+    id: 4, 
+    massage: newPost, 
+    likes: 13
+  }
+  state.profilePage.posts.push(newMassage)
+}
 export default state;
