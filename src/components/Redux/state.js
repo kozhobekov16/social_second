@@ -1,10 +1,13 @@
+import { entireRender } from "../../render";
+
 const state = {
   profilePage: {
     posts: [
-      { id: 1, massage: "Hey, how are you", likes: 15 },
-      { id: 2, massage: "What are doing?", likes: 10 },
-      { id: 3, massage: "What d doing?", likes: 11 },
+      { massage: "Hey, how are you", likes: 15 },
+      { massage: "What are doing?", likes: 10 },
+      { massage: "What d doing?", likes: 11 },
     ],
+    postMassage: ''
   },
   dialogsPage: {
     data: [
@@ -18,12 +21,17 @@ const state = {
   },
 };
 
-export const addPost = (newPost) => {
+export const addPost = () => {
   let newMassage = {
     id: 4, 
-    massage: newPost, 
+    massage: state.profilePage.postMassage, 
     likes: 13
   }
   state.profilePage.posts.push(newMassage)
+  entireRender()
 }
+export const changeValuePost = (newValueMassage) =>{
+  state.profilePage.postMassage  = newValueMassage
+  entireRender()
+} 
 export default state;
