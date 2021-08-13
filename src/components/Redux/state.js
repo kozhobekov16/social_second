@@ -1,5 +1,6 @@
-import { entireRender } from "../../render";
-
+let entireRender = () => {
+  console.log('render')
+}
 const state = {
   profilePage: {
     posts: [
@@ -34,4 +35,7 @@ export const changeValuePost = (newValueMassage) =>{
   state.profilePage.postMassage  = newValueMassage
   entireRender()
 } 
+export const subscribe = (observer) => {
+  entireRender = observer
+}
 export default state;
